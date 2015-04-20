@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>AngularJS</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/blood.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+
+    <!--<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">-->
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if (window.location.search.match(/print-pdf/gi)) {
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        }
+    </script>
+    <style>
+    	img {
+    		margin-left: 3em;
+    	}
+    </style>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section>
+    <section>
+        <img src="images/angularjs.png">
+        <br><br>
+        <h6>Alexandre Nunesse | Jason Conard</h6>
+        <br>
+    </section>
+
+    <section>
+    <h3>Liens utiles</h3><br>
+    <ul>
+    	<li>Exercices: <a href="#">Doc exercice</a></li><br>
+    	<li>Projet: <a href="#">Git Tweeter</a></li>
+    </ul>
+    </section>
+</section>
+
+<section>
+    <section>
+    	<h2>Environnement</h2>
+    </section>
+
+    <section>
+    	<h2>Outils de développement</h2>
+    	<img src="images/a.png" width="160" height="160">
+    	<img src="images/nodejs.svg" width="160" height="160">
+    	<img src="images/npm.svg" width="160" height="160">
+    	<img src="images/yeoman.png" width="160" height="160">
+    	<img src="images/bower.png" width="160" height="160">
+    	<img src="images/gulp.png" width="160" height="160">
+    	<img src="images/sass.png" width="160" height="160">
+    </section>
+
+    <section>
+    	<h2>AngularJS</h2>
+    	<img src="images/a.png" width="200" height="200">
+    	<!-- TODO: update -->
+    	<p>Current version: 1.3.15</p>
+    	<div data-markdown>
+    	<script type="text/template">
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    	</script>
+    	</div>
+    </section>
+
+    <section>
+    	<h2>NodeJS et NPM</h2>
+    	<img src="images/nodejs.svg" width="200" height="200">
+    	<img src="images/npm.svg" width="200" height="200">
+    	<!-- TODO: update -->
+    	<p>Current versions: Node 0.12.2 & Npm 2.8.3</p>
+    	<div data-markdown>
+    	<script type="text/template">
+    	$ node -v
+    	0.12.2
+    	$ npm -v
+    	2.8.3
+    	</script>
+    	</div>
+    </section>
+
+    <section>
+    	<h2>Gulp</h2>
+    	<img src="images/gulp.png" width="200" height="200">
+    	<!-- TODO: update -->
+    	<p>Current version: 3.8.11</p>
+    	<div data-markdown>
+    	<script type="text/template">
+    	$ gulp -v
+    	CLI version 3.8.11
+    	</script>
+    	</div>
+    </section>
+
+    <section>
+    	<h2>Sass</h2>
+    	<img src="images/sass.png">
+    	<!-- TODO: update -->
+    	<div data-markdown>
+    	<script type="text/template">
+    	$ ruby -v
+		ruby 1.8.7 (2011-06-30 patchlevel 352) [x86_64-linux]
+    	$ sass -v
+		Sass 3.4.5 (Selective Steve)
+    	</script>
+    	</div>
+    </section>
+
+    <section>
+    	<h2>Yeoman</h2>
+    	<img src="images/yo.png">
+    	<!-- TODO: update -->
+    	<div data-markdown>
+    	<script type="text/template">
+    	$ yo 
+		? 'Allo alexandre! What would you like to do? (Use arrow keys)'
+		  Run a generator
+		  ──────────────
+		❯ Install a generator 
+		  Find some help 
+		  Get me out of here! 
+		  ──────────────
+    	</script>
+    	</div>
+    </section>
+
+    <section>
+        <h1>LiveCoding</h1>
+        <br>
+        <p></p>
+    </section>
+
+</section>
+
+<section>
+    <section>
+    	<h2>Responsive web design</h2>
+    </section>
+
+    <section>
+    	<h4><a href="https://www.barackobama.com/#">barackobama.com</a></h4>
+    </section>
+
+    <section>
+    	<p>Depuis 2014 plus de page sont demandées depuis des mobiles que des ordinateurs.</p>
+    </section>
+
+    <section>
+    	<p>Différentes approches de conception responsive</p>
+    	<ul>
+    		<li>Mobile 1st</li>
+    		<li>Desktop 1st</li>
+    	</ul>
+    </section>
+
+    <section>
+    	<h5>Media queries</h5>
+    	<p>Une nouveauté CSS3</p>
+    </section>
+
+    <section>
+    	<h5>Mixins, variables et nesting</h5>
+    	<p>Comment vous faire devenir des développeurs Front</p>
+    </section>
+
+</section>
+
+<section>
+    <section>
+    	<h1>Web Component</h1>
+    </section>
+
+    <section>
+    	...
+    </section>
+
+    <section>
+    	+ polymer + web component
+    </section>
+
+	<section>
+        <h1>LiveCoding</h1>
+        <br>
+        <p>My Box</p>
+    </section>
+
+</section>
+
+<section>
+    <section>
+    	<h1>Javascript</h1>
+    </section>
+
+    <section>
+    	EC5 -> EC6
+    	+ NodeJS
+    	+ ...
+    </section>
+
+</section>
+
+<section>
+    <section>
+    	<h1>AngularJS</h1>
+    	<p class="fragment" data-fragment-index="1">Un framework JavaScript libre et open-source par Google</p>
+    	<p class="fragment" data-fragment-index="1">Depuis quand? <strong class="fragment" data-fragment-index="2">2009</strong></p>
+    </section>
+
+    <section>
+    	<p>AngularJS est un Framework se basant sur le pattern MVC</p>
+    	<p>Plus généralement on peut en retenir 3 concepts clefs:</p>
+    	<ul>
+    		<li>Framework MVW</li>
+			<li>Two way databinding</li>
+			<li>Framework ouvert et modulaire</li>
+    	</ul>
+    </section>
+
+    <section>
+    	<p>Les principaux conteneurs d'AngularJS:</p>
+    	<ul>
+    		<li class="fragment" data-fragment-index="1">Le module: sans module pas d'application</li>
+			<li class="fragment" data-fragment-index="2">Controllers</li>
+			<li class="fragment" data-fragment-index="3">Service & Factory</li>
+			<li class="fragment" data-fragment-index="4">Le scope</li>
+			<li class="fragment" data-fragment-index="5">Les directives</li>
+    	</ul>
+    </section>
+
+    <section>
+    	<h5>Architecture MVC</h5><br>
+    	<img src="images/angularmvc.png" width="80%">
+    </section>
+
+    <section>
+    	<h2>LiveCoding</h2>
+        <br>
+        <p>Hello AngularJS</p>
+    </section>
+
+    <section>
+    	<h3>Les directives</h3><br>
+    	<p>L'art de créer ses propres balises/attributs html</p>
+    	<p>Convention camel case maDirective <-- --> ma-directive convention xml</p>
+    </section>
+
+    <section>
+    	<h3>Validation de formulaire</h3>
+    </section>
+
+	<section>
+        <h1>LiveCoding</h1>
+        <br>
+        <p>Directive + formulaire</p>
+    </section>
+
+    <section>
+    	<h3>Convention NodeJS</h3><br>
+    	<ul>
+    		<li>Controller as</li>
+    	</ul>
+    </section>
+
+    <section>
+    	<h3>AngularJS pro tricks</h3><br>
+    	<ul>
+    		<li>Héritage</li>
+    		<li>ngRepeat : $odd/$even, $index</li>
+    		<li>and more</li>
+    	</ul>
+    </section>
+
+</section>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
