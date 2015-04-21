@@ -223,10 +223,92 @@
     </section>
 
     <section>
-    	EC5 -> EC6
-    	+ NodeJS
-    	+ ...
+    	<h3>Concepts</h3>
+      <ul>
+        <li class="fragment" data-fragment-index="1">Non typé</li>
+        <li class="fragment" data-fragment-index="2">Orienté objet <span class="fragment" data-fragment-index="3">, mais sans classes.</span></li>
+        <li class="fragment" data-fragment-index="4">Fonctionnel</li>
+      </ul>
+
+
     </section>
+
+    <section>
+      <h3>ECMAScript 5</h3>
+      <ul>
+        <li>Language de programmation</li>
+        <li>Un standard</li>
+        <li>Implémenté dans le JavaScript, l'ActionScript et le C++</li>
+      </ul>
+    </section>
+
+    <section>
+    	<h3>ECMAScript 6/2015</h3>
+      <ul>
+        <li>Mot clé : class</li>
+        <li>Gestion des modules</li>
+        <li>Promesses</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Mode strict</h3>
+      <h4>Vérifications plus rigoureuses</h4>
+      <ul>
+        <li>Variable non déclarée signalée</li>
+        <li>Plus d'objet global à la place de undefined pour this</li>
+        <li>Impose l'unicité des propriétés</li>
+        <li>Impose l'unicité des noms d'arguments dans les fonctions</li>
+        <li>Pas de saut de ligne après return et throw</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Passage par référence</h3>
+      <ul>
+        <li>Types primitifs : boolean, number (imprécis), string, undefined, null.</li>
+        <li>Passage par valeur</li>
+        <li>Type Objet : Tous les autres types (function, array ...).</li>
+        <li>Passage par référence</li>
+        <li>angular.copy(var)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Autoboxing</h3>
+      <ul>
+        <li>boolean, number, string sont des types immuables.</li>
+        <li>Convertis en objet Boolean Number et String à si besoin.</li>
+        <li class="fragment" data-fragment-index="1">var myString = "blabla"; ==> <span class="fragment" data-fragment-index="2">C'est un type primitif.</span></li>
+        <li class="fragment" data-fragment-index="3">myString.length; ==> <span class="fragment" data-fragment-index="4">myString est converti en objet.</span></li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h3>Closure</h3>
+      <ul>
+        <li>Accolades != Closure</li>
+        <li>Scopes JS relatifs aux fonctions.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Valeurs par défaut</h3>
+      <ul>
+        <li>Les && et || ne retournent pas forcément un booléen.</li>
+        <li>Ils retournent le dernier objet validé.</li>
+        <li>
+          Pour créer une valeur par défaut :
+          <p class="fragment" data-fragment-index="1">var number = givenNumber || 5;</p>
+        </li>
+
+      </ul>
+    </section>
+
+
+
+
 
 </section>
 
