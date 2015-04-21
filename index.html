@@ -36,6 +36,72 @@
     	img {
     		margin-left: 3em;
     	}
+
+      .obama-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .obama {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        background-image: url('images/obama.png');
+        margin: auto !important;
+
+        -moz-box-shadow: 0px 0px 20px black;
+        -webkit-box-shadow: 0px 0px 20px black;
+        -o-box-shadow: 0px 0px 20px black;
+        box-shadow: 0px 0px 20px black;
+      }
+
+      .reveal a:not(.image) {
+        color: #ff9f38;
+        text-shadow: 1px 1px 1px #000;
+      }
+
+      .reveal a:not(.image):hover {
+        color: #ffc434;
+      }
+
+      .obama-bouche {
+        top: 0px;
+        left: 0px;
+        width: 200px;
+        height: 200px;
+        background-image: url('images/obama-bouche.png');
+        position: absolute;
+        -webkit-animation: mymove 1s infinite; /* Chrome, Safari, Opera */
+        animation: mymove 1s infinite;
+      }
+
+      /* Chrome, Safari, Opera */
+      @-webkit-keyframes mymove {
+        0%   {top: 0px;}
+        10%  {top: 20px;}
+        20%  {top: 10px;}
+        30%  {top: 20px;}
+        40%  {top: 10px;}
+        50%  {top: 20px;}
+        60%  {top: 10px;}
+        70%  {top: 20px;}
+        100% {top: 0px;}
+      }
+
+      /* Standard syntax */
+      @keyframes mymove {
+        0%   {top: 0px;}
+        10%  {top: 20px;}
+        20%  {top: 10px;}
+        30%  {top: 20px;}
+        40%  {top: 10px;}
+        50%  {top: 20px;}
+        60%  {top: 10px;}
+        70%  {top: 20px;}
+        100% {top: 0px;}
+      }
     </style>
 
     <!--[if lt IE 9]>
@@ -169,6 +235,13 @@
     </section>
 
     <section>
+      <div class="obama-container">
+        <div class="obama">
+          <div class="obama-bouche"></div>
+        </div>
+      </div>
+
+      <br/>
     	<h4><a href="https://www.barackobama.com/#">barackobama.com</a></h4>
     </section>
 
@@ -358,7 +431,85 @@
     </section>
 
     <section>
-    	<h3>Validation de formulaire</h3>
+    	<h3>Directives à connaître</h3>
+      <ul>
+        <li><strong>ng-app</strong> : Précise les éléments sur lequel le module agira.</li>
+        <li><strong>ng-controller</strong> : Idem mais pour un Controller.</li>
+        <li><strong>ng-view</strong> : Vue liée à la route.</li>
+        <li><strong>ng-include</strong> : Vue liée à une page html.</li>
+        <li><strong>ng-click</strong> : Un événement au clic</li>
+        <li><strong>ng-repeat</strong> : Liste un tableau</li>
+        <li><strong>ng-show/ng-if</strong> : Affiche un élément sous condition</li>
+        <li><strong>ng-class</strong> : Applique une classe CSS sous condition</li>
+      </ul>
+      <br/><br/>
+      <p>Liste officielle des directives : <a href="https://docs.angularjs.org/api/ng/directive" target="_blank">https://docs.angularjs.org/api/ng/directive</a></p>
+    </section>
+
+    <section>
+    	<h3>Opérations sur les formulaires : booléens</h3>
+      <ul>
+        <li><strong>$pristine</strong> : Champ non modifié</li>
+        <li><strong>$dirty</strong> : Champ modifié</li>
+        <li><strong>$valid</strong> : Champ valide</li>
+        <li><strong>$invalid</strong> : Champ non valide</li>
+        <li><strong>$submitted</strong> : Formulaire déjà envoyé</li>
+        <li><strong>$error</strong> : Test par type d'erreur</li>
+      </ul>
+    </section>
+
+    <section>
+    	<h3>Opérations sur les formulaires : $error</h3>
+      <ul>
+        <li>$error.required</li>
+        <li>$error.email</li>
+        <li>$error.pattern</li>
+        <li>$error.min</li>
+        <li>$error.max</li>
+        <li>...</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Opérations sur les formulaires : directives</h3>
+      <ul>
+        <li><strong>ng-model</strong> : Bind une variable du scope à un input.</li>
+        <li><strong>ng-change</strong> : Événement lors de la modif d'un input.</li>
+        <li><strong>ng-focus</strong> : Événement lors du focus sur l'input.</li>
+        <li><strong>ng-blur</strong> : Événement lors de la sortie du focus.</li><br/>
+        <li>ng-required</li>
+        <li>ng-minlength</li>
+        <li>ng-maxlength</li>
+        <li>ng-pattern</li>
+
+      </ul>
+    </section>
+
+    <section>
+      <h3>Opérations sur les formulaires : classes css</h3>
+      <ul>
+        <li>.ng-valid</li>
+        <li>.ng-invalid</li>
+        <li>.ng-pristine</li>
+        <li>.ng-dirty</li>
+        <li>Ces classes sont posés sur les form et les input correspondants.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Opérations sur les formulaires : ressources</h3>
+      <ul>
+        <li>
+          <a href="https://docs.angularjs.org/api/ng/type/form.FormController" target="_blank">
+            https://docs.angularjs.org/api/ng/type/form.FormController
+          </a>
+        </li>
+        <li>
+          <a href="https://docs.angularjs.org/api/ng/directive/input" target="_blank">
+            https://docs.angularjs.org/api/ng/directive/input
+          </a>
+        </li>
+      </ul>
     </section>
 
 	<section>
@@ -379,6 +530,7 @@
     	<ul>
     		<li>Héritage</li>
     		<li>ngRepeat : $odd/$even, $index</li>
+    		<li>Animations avec ngClass et transition (CSS3)</li>
     		<li>and more</li>
     	</ul>
     </section>
